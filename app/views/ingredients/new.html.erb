@@ -1,0 +1,18 @@
+<div class="main ingredients-new">
+  <div class="container">
+    <h2 class="form-heading">新規食材登録</h2>
+    <div class="form ingredients-form">
+      <div class="form-body">
+        <%= form_tag("/ingredients/create") do %>
+          <p>食品名</p>
+          <input name="name" value="<%= @ingredient.name %>">
+          <p>カテゴリ</p>
+          <input name="category" value="<%= @ingredient.category %>">
+          <p>数量</p>
+          <input name="quantity" value="<%= @ingredient.quantity %>">
+          <input type="submit" value="新規登録">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

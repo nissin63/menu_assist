@@ -1,0 +1,12 @@
+<div class="main ingredients-index">
+  <div class="container">
+    <h2 class="ingredients-heading">登録中の食材</h2>
+    <% @ingredients.each do |ingredient| %>
+      <div class="ingredients-index-item">
+        <div class="ingredients-right">
+        <%= ingredient.name %> / <%= ingredient.category %>/ <%= ingredient.quantity %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

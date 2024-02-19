@@ -1,0 +1,196 @@
+/* ページ全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #393f42;
+  background-color: #3ecdc6;
+}
+
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+/* ヘッダー */
+header {
+  height: 64px;
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+}
+
+
+.header-logo {
+  float: left;
+  color: white;
+  font-size: 22px;
+  padding-left: 20px;
+  padding-right: 15px; 
+}
+
+.header-logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+  padding-left: 15px;
+}
+
+.header-menus li {
+  margin-left: 10px;
+  display: inline;
+}
+
+.header-menus li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+/* メインコンテナ */
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* トップメッセージ */
+.top-message {
+  position: relative;
+}
+
+/* 見出し */
+.top-main h2 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+}
+
+/* コンテンツ */
+.contents {
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+
+
+.contents div {
+  margin-right: 5px; 
+  border: 3px solid #FFA500; /* 枠の色と太さを指定 */
+  border-radius: 5%;
+  padding: 8px; /* 枠の中の余白 */
+  background-color: white; /* 枠の内側の色 */
+  font-size: 30px;
+}
+
+.contents p {
+  font-size: 20px;
+}
+
+/* リロードメッセージ */
+.reload-message {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.ingredients-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 48px;
+  color: white;
+}
+
+.ingredients-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: table;
+  width: 100%;
+}
+
+
+.ingredients-name a {
+  font-weight: 600;
+}
+
+.ingredients-name a:hover {
+  color: #3ecdc6;
+}
+
+.ingredients-left {
+  float: left;
+  width: 10%;
+}
+
+.ingredients-right {
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+/* ingredients/new, ingredients/edit ================================ */
+.ingredients-form input {
+  margin-bottom: 15px;
+}
+
+.form-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 48px;
+  color: white;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.form input[type="submit"] {
+  background-color: #FFA500;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  float: right;
+}
+
+
+.form textarea {
+  width: 100%;
+  min-height: 110px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}

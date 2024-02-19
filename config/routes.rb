@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+    # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "ingredients/index" => "ingredients#index"
+  get "ingredients/new" => "ingredients#new"
+  get "ingredients/:id" => "ingredients#show"
+  post "ingredients/create" => "ingredients#create"
+  get "ingredients/:id/edit" => "ingredients#edit"
+  post "ingredients/:id/update" => "ingredients#update"
+  post "ingredients/:id/destroy" => "ingredients#destroy"
+
+  
+  get "home/index" => "home#display_random_items"
+
+
+
+    
+  get "/" => "home#index"
+  
+    
 end

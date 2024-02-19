@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MenuAssist</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="/assets/styles.css">
   </head>
 
   <body>
     <header>
       <div class="header-logo">
-          <%= link_to("献立アシスト", "/") %>
+          <%= link_to("幼児食献立アシスト", "/") %>
       </div>
       <ul class="header-menus">
-          <li>
-            <%= link_to("材料登録", "/new") %>
-          </li>
+      <li>
+      <%= link_to("食材登録", "/ingredients/new") %>
+      </li>
+      <li>
+      <%= link_to("登録中の食材", "/ingredients/index") %>
+      </li>
       </ul>
     </header>
-
-    <% if flash[:notice] %>
-      <div class="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>
+
