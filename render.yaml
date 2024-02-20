@@ -1,0 +1,22 @@
+databases:
+  - name: menu_assist_DB
+    databaseName: menu_assist_db
+    user: menu_assist
+    region: singapore
+
+services:
+  - type: web
+    name: menu_assist
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: menu_assist_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
