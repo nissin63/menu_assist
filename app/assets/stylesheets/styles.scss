@@ -95,10 +95,10 @@ header {
 
 .contents div {
   margin-right: 5px; 
-  border: 3px solid #FFA500; /* 枠の色と太さを指定 */
+  border: 3px solid #FFA500; 
   border-radius: 5%;
-  padding: 8px; /* 枠の中の余白 */
-  background-color: white; /* 枠の内側の色 */
+  padding: 8px; 
+  background-color: white; 
   font-size: 30px;
 }
 
@@ -153,7 +153,7 @@ header {
 }
 
 
-/* ingredients/new, ingredients/edit ================================ */
+/* ingredients/new */
 .ingredients-form input {
   margin-bottom: 15px;
 }
