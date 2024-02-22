@@ -6,15 +6,9 @@ Rails.application.routes.draw do
   get "ingredients/new" => "ingredients#new"
   get "ingredients/:id" => "ingredients#show"
   post "ingredients/create" => "ingredients#create"
-  get "ingredients/:id/edit" => "ingredients#edit"
-  post "ingredients/:id/update" => "ingredients#update"
   post "ingredients/:id/destroy" => "ingredients#destroy"
-
-  
+    
   get "home/index" => "home#display_random_items"
-
-
-
     
   get "/" => "home#index"
   

@@ -6,6 +6,9 @@
         <div class="ingredients-right">
         <%= ingredient.name %> / <%= ingredient.category %>/ <%= ingredient.quantity %>
         </div>
+        <div class="ingredients-delete">
+        <%= link_to("削除", "/ingredients/#{@ingredient.id}/destroy", {method: "post"}) %>
+        </div>
       </div>
     <% end %>
   </div>
