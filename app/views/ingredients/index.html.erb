@@ -4,10 +4,7 @@
     <% @ingredients.each do |ingredient| %>
       <div class="ingredients-index-item">
         <div class="ingredients-right">
-        <%= ingredient.name %> / <%= ingredient.category %>/ <%= ingredient.quantity %>
-        </div>
-        <div class="ingredients-delete">
-        <%= link_to("削除", "/ingredients/#{@ingredient.id}/destroy", {method: "post"}) %>
+        <%= ingredient.name %> / <%= ingredient.category %>/ <%= ingredient.quantity %><%= button_to("削除", "/ingredients/#{ingredient.id}",method: :delete) %>
         </div>
       </div>
     <% end %>

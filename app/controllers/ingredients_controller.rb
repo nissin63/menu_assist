@@ -9,6 +9,11 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
  end
 
+def show
+  @ingredient = Ingredient.find_by(id: params[:id])
+end
+
+
  def create
     @ingredient = Ingredient.new(name: params[:name],category: params[:category],quantity: params[:quantity])
     if @ingredient.save
@@ -17,7 +22,7 @@ class IngredientsController < ApplicationController
   end
 
   def destroy
-    @ingredient = Ingredient.find_by(params[:id])
+    @ingredient = Ingredient.find_by(id: params[:id])
     @ingredient.destroy
     redirect_to("/ingredients/index")
   end
